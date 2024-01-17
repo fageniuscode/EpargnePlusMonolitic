@@ -1,0 +1,23 @@
+#définit une clé secrète (secret key) pour l'utilisation de JSON Web Tokens (JWTs)
+jwt:
+  secret: '[a-zA-Z0-9._]^+$Guidelines89797987forAlphabeticalArraNumeralsandOtherSymbo$'
+
+server:
+  port: 9191
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/epargne_plus_db
+    username: postgres
+    password: passer@123
+  application:
+    name: AUTH-SERVICE
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
